@@ -1,0 +1,217 @@
+object frmMain: TfrmMain
+  Left = 532
+  Height = 608
+  Top = 229
+  Width = 965
+  Caption = 'Layout'
+  ClientHeight = 608
+  ClientWidth = 965
+  DesignTimePPI = 120
+  KeyPreview = True
+  LCLVersion = '3.6.0.0'
+  object pnlTop: TPanel
+    Left = 0
+    Height = 170
+    Top = 0
+    Width = 965
+    Align = alTop
+    ClientHeight = 170
+    ClientWidth = 965
+    TabOrder = 0
+    OnMouseDown = pnlTopMouseDown
+    object btnLeftTop: TButton
+      Left = 72
+      Height = 31
+      Top = 24
+      Width = 112
+      Caption = 'Left Top'
+      TabOrder = 0
+    end
+    object btnLeftButtom: TButton
+      Left = 72
+      Height = 31
+      Top = 122
+      Width = 110
+      Anchors = [akLeft, akBottom]
+      Caption = 'Left Buttom'
+      TabOrder = 1
+    end
+    object btnRightTop: TButton
+      Left = 824
+      Height = 31
+      Top = 24
+      Width = 112
+      Anchors = [akTop, akRight]
+      Caption = 'Right Top'
+      TabOrder = 2
+    end
+    object btnRightButtom: TButton
+      Left = 824
+      Height = 31
+      Top = 122
+      Width = 112
+      Anchors = [akRight, akBottom]
+      Caption = 'Right Buttom'
+      TabOrder = 3
+    end
+    object edtLeftRightTop: TEdit
+      Left = 224
+      Height = 28
+      Top = 27
+      Width = 325
+      Anchors = [akTop, akLeft, akRight]
+      TabOrder = 4
+      Text = 'Left Right Top'
+    end
+    object mmoLeftTopButtom: TMemo
+      Left = 224
+      Height = 89
+      Top = 64
+      Width = 325
+      Anchors = [akTop, akLeft, akBottom]
+      Lines.Strings = (
+        'Left Top Buttom'
+      )
+      TabOrder = 5
+    end
+    object mmoLeftRightTopButtom: TMemo
+      Left = 560
+      Height = 89
+      Top = 64
+      Width = 256
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      Lines.Strings = (
+        'Left Right Top Buttom'
+      )
+      TabOrder = 6
+    end
+  end
+  object pnlClient: TPanel
+    Left = 0
+    Height = 403
+    Top = 176
+    Width = 965
+    Align = alClient
+    ClientHeight = 403
+    ClientWidth = 965
+    TabOrder = 1
+    object pnlClientLeft: TPanel
+      Left = 1
+      Height = 401
+      Top = 1
+      Width = 359
+      Align = alLeft
+      ClientHeight = 401
+      ClientWidth = 359
+      TabOrder = 0
+      OnMouseDown = pnlClientLeftMouseDown
+      object lstBorderStyle: TListBox
+        Left = 63
+        Height = 130
+        Top = 54
+        Width = 153
+        Items.Strings = (
+          'Dialog'
+          'None'
+          'Single'
+          'Sizeable'
+          'SizeToolWin'
+          'ToolWindows'
+        )
+        ItemHeight = 20
+        ItemIndex = 0
+        TabOrder = 0
+      end
+      object btnChangeFormBorser: TButton
+        Left = 224
+        Height = 31
+        Top = 56
+        Width = 94
+        Caption = 'Change'
+        TabOrder = 1
+        OnClick = btnChangeFormBorserClick
+      end
+      object Label1: TLabel
+        Left = 64
+        Height = 20
+        Top = 32
+        Width = 83
+        Caption = 'Form Border'
+      end
+    end
+    object Splitter2: TSplitter
+      Left = 360
+      Height = 401
+      Top = 1
+      Width = 6
+    end
+    object pnlClientClient: TPanel
+      Left = 366
+      Height = 401
+      Top = 1
+      Width = 598
+      Align = alClient
+      ClientHeight = 401
+      ClientWidth = 598
+      TabOrder = 2
+      OnMouseDown = pnlClientClientMouseDown
+      object PageControl1: TPageControl
+        Left = 1
+        Height = 399
+        Top = 1
+        Width = 596
+        ActivePage = TabSheet1
+        Align = alClient
+        TabIndex = 0
+        TabOrder = 0
+        object TabSheet1: TTabSheet
+          Caption = 'Sheet1'
+          ClientHeight = 366
+          ClientWidth = 588
+          object Label2: TLabel
+            Left = 16
+            Height = 20
+            Top = 40
+            Width = 92
+            Caption = 'i am in sheet1'
+          end
+        end
+        object TabSheet2: TTabSheet
+          Caption = 'Sheet2'
+          ClientHeight = 366
+          ClientWidth = 588
+          object Label3: TLabel
+            Left = 300
+            Height = 20
+            Top = 163
+            Width = 96
+            Caption = 'i am in sheet 2'
+          end
+        end
+      end
+    end
+  end
+  object StatusBar: TStatusBar
+    Left = 0
+    Height = 29
+    Top = 579
+    Width = 965
+    Panels = <    
+      item
+        Width = 200
+      end    
+      item
+        Width = 0
+      end>
+    SimplePanel = False
+  end
+  object Splitter1: TSplitter
+    Cursor = crVSplit
+    Left = 0
+    Height = 6
+    Top = 170
+    Width = 965
+    Align = alTop
+    ResizeAnchor = akTop
+  end
+end
