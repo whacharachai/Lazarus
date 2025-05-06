@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test POST to JSON Database</title>
+</head>
+<body>
+    <h2>Test JSON POST Request</h2>
+    <form id="testForm">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" required>
+        <br><br>
+        
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+            <option value="Begin Edit">Begin Edit</option>
+            <option value="Finish Edit">Finish Edit</option>
+            <option value="Sent">Sent</option>
+        </select>
+        <br><br>
+        
+        <button type="button" onclick="sendData()">Submit</button>
+    </form>
+
+    <h3>Response:</h3>
+    <p id="response"></p>
+
+    <script>
+        function sendData() {
+            let data = {
+                id: document.getElementById("id").value,
+                status: document.getElementById("status").value
+            };
+
+            fetch("https://nuinhouse.com/rdu/scan_barcode/save_status.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("response").innerText = "Server Response: " + JSON.stringify(data);
+            })
+            .catch(error => {
+                document.getElementById("response").innerText = "Error: " + error;
+            });
+        }
+    </script>
+</body>
+</html>
+
+
+
+
