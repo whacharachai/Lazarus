@@ -1,0 +1,277 @@
+object frmMain: TfrmMain
+  Left = 508
+  Height = 670
+  Top = 172
+  Width = 888
+  Caption = 'Variable'
+  ClientHeight = 670
+  ClientWidth = 888
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '3.6.0.0'
+  object edit1: TLabeledEdit
+    Left = 120
+    Height = 28
+    Top = 56
+    Width = 100
+    Alignment = taCenter
+    EditLabel.Height = 20
+    EditLabel.Width = 34
+    EditLabel.Caption = 'edit1'
+    LabelPosition = lpLeft
+    LabelSpacing = 5
+    TabOrder = 0
+  end
+  object edit2: TLabeledEdit
+    Left = 336
+    Height = 28
+    Top = 56
+    Width = 100
+    Alignment = taCenter
+    EditLabel.Height = 20
+    EditLabel.Width = 34
+    EditLabel.Caption = 'edit2'
+    LabelPosition = lpLeft
+    LabelSpacing = 5
+    TabOrder = 1
+  end
+  object btnProcess: TButton
+    Left = 600
+    Height = 31
+    Top = 53
+    Width = 94
+    Caption = 'Process'
+    TabOrder = 2
+    OnClick = btnProcessClick
+  end
+  object Label1: TLabel
+    Left = 472
+    Height = 28
+    Top = 56
+    Width = 96
+    Alignment = taCenter
+    AutoSize = False
+    Color = clGray
+    Font.Color = clWhite
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object Label2: TLabel
+    Left = 144
+    Height = 20
+    Top = 32
+    Width = 27
+    Caption = 'Text'
+    Font.Color = clBlue
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 368
+    Height = 20
+    Top = 32
+    Width = 27
+    Caption = 'Text'
+    Font.Color = clBlue
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 496
+    Height = 20
+    Top = 32
+    Width = 52
+    Alignment = taCenter
+    Caption = 'Caption'
+    Font.Color = clBlue
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 256
+    Height = 20
+    Top = 64
+    Width = 10
+    Caption = '+'
+  end
+  object Label6: TLabel
+    Left = 448
+    Height = 20
+    Top = 64
+    Width = 10
+    Caption = '='
+  end
+  object Label7: TLabel
+    Left = 120
+    Height = 20
+    Top = 104
+    Width = 567
+    Caption = 'Label1.Caption := (string(edit1.Text).ToDouble + string(edit2.Text).ToDouble).ToString;'
+    Font.Color = clBlue
+    ParentFont = False
+  end
+  object StringGrid1: TStringGrid
+    Left = 72
+    Height = 182
+    Top = 224
+    Width = 392
+    ColCount = 4
+    FixedCols = 0
+    RowCount = 2
+    TabOrder = 3
+    OnClick = StringGrid1Click
+  end
+  object edtFirstName: TLabeledEdit
+    Left = 528
+    Height = 28
+    Top = 232
+    Width = 124
+    EditLabel.Height = 20
+    EditLabel.Width = 46
+    EditLabel.Caption = 'ชื่อ สกุล'
+    LabelPosition = lpLeft
+    LabelSpacing = 5
+    TabOrder = 4
+  end
+  object edtLastName: TEdit
+    Left = 656
+    Height = 28
+    Top = 232
+    Width = 148
+    TabOrder = 5
+  end
+  object edtAge: TLabeledEdit
+    Left = 528
+    Height = 28
+    Top = 266
+    Width = 124
+    EditLabel.Height = 20
+    EditLabel.Width = 23
+    EditLabel.Caption = 'อายุ'
+    LabelPosition = lpLeft
+    LabelSpacing = 5
+    TabOrder = 6
+  end
+  object cmbOS: TComboBox
+    Left = 528
+    Height = 28
+    Top = 301
+    Width = 124
+    ItemHeight = 20
+    ItemIndex = 0
+    Items.Strings = (
+      'iOS'
+      'Android'
+      'HarmonyOS'
+    )
+    TabOrder = 7
+    Text = 'iOS'
+  end
+  object Label8: TLabel
+    Left = 492
+    Height = 20
+    Top = 304
+    Width = 29
+    Alignment = taRightJustify
+    Caption = 'ระบบ'
+  end
+  object btnAdd: TButton
+    Left = 488
+    Height = 30
+    Top = 352
+    Width = 94
+    Caption = 'Add'
+    TabOrder = 8
+    OnClick = btnAddClick
+  end
+  object btnEdit: TButton
+    Left = 584
+    Height = 30
+    Top = 352
+    Width = 94
+    Caption = 'Edit'
+    TabOrder = 9
+    OnClick = btnEditClick
+  end
+  object edtDelete: TButton
+    Left = 680
+    Height = 30
+    Top = 352
+    Width = 94
+    Caption = 'Delete'
+    TabOrder = 10
+    OnClick = edtDeleteClick
+  end
+  object edtA: TLabeledEdit
+    Left = 120
+    Height = 28
+    Top = 504
+    Width = 100
+    Alignment = taCenter
+    EditLabel.Height = 20
+    EditLabel.Width = 10
+    EditLabel.Caption = 'A'
+    LabelPosition = lpLeft
+    LabelSpacing = 5
+    NumbersOnly = True
+    TabOrder = 11
+  end
+  object edtB: TLabeledEdit
+    Left = 120
+    Height = 28
+    Top = 544
+    Width = 100
+    Alignment = taCenter
+    EditLabel.Height = 20
+    EditLabel.Width = 9
+    EditLabel.Caption = 'B'
+    LabelPosition = lpLeft
+    LabelSpacing = 5
+    NumbersOnly = True
+    TabOrder = 12
+  end
+  object btnAddSingle: TButton
+    Left = 364
+    Height = 31
+    Top = 520
+    Width = 110
+    Caption = 'Add as Real'
+    TabOrder = 13
+    OnClick = btnAddSingleClick
+  end
+  object Label9: TLabel
+    Left = 320
+    Height = 20
+    Top = 558
+    Width = 29
+    Caption = 'A+B'
+  end
+  object btnAddString: TButton
+    Left = 544
+    Height = 31
+    Top = 520
+    Width = 114
+    Caption = 'Add as String'
+    TabOrder = 14
+    OnClick = btnAddStringClick
+  end
+  object lblAsSingle: TLabel
+    Left = 364
+    Height = 20
+    Top = 558
+    Width = 108
+    AutoSize = False
+    Color = clMoneyGreen
+    ParentColor = False
+    Transparent = False
+  end
+  object lblAsString: TLabel
+    Left = 544
+    Height = 20
+    Top = 558
+    Width = 112
+    AutoSize = False
+    Color = clMoneyGreen
+    ParentColor = False
+    Transparent = False
+  end
+end
