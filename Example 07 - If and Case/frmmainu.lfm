@@ -1,0 +1,142 @@
+object frmMain: TfrmMain
+  Left = 552
+  Height = 641
+  Top = 219
+  Width = 948
+  Caption = 'If and Case'
+  ClientHeight = 641
+  ClientWidth = 948
+  DesignTimePPI = 120
+  LCLVersion = '3.6.0.0'
+  object Memo1: TMemo
+    Left = 128
+    Height = 113
+    Top = 80
+    Width = 568
+    Color = clBtnFace
+    Font.Color = clBlue
+    Font.Height = -17
+    Font.Name = 'Courier New'
+    Lines.Strings = (
+      'If I >= 10 then'
+      '  if I < 15 then lblResult.Caption := ''10 < I < 15'''
+      'else'
+      '  lblResult.Caption := ''I < 10''; '
+    )
+    ParentFont = False
+    TabOrder = 0
+  end
+  object btnCase1: TButton
+    Left = 736
+    Height = 31
+    Top = 112
+    Width = 94
+    Caption = 'Case 1'
+    TabOrder = 1
+    OnClick = btnCase1Click
+  end
+  object edtI: TLabeledEdit
+    Left = 104
+    Height = 28
+    Top = 28
+    Width = 72
+    Alignment = taCenter
+    EditLabel.Height = 20
+    EditLabel.Width = 4
+    EditLabel.Caption = 'I'
+    LabelPosition = lpLeft
+    LabelSpacing = 10
+    TabOrder = 2
+    Text = '0'
+  end
+  object lblResult: TLabel
+    Left = 192
+    Height = 28
+    Top = 28
+    Width = 268
+    AutoSize = False
+    Color = clMoneyGreen
+    ParentColor = False
+    Transparent = False
+  end
+  object Memo2: TMemo
+    Left = 128
+    Height = 113
+    Top = 200
+    Width = 568
+    Color = clBtnFace
+    Font.Color = clBlue
+    Font.Height = -17
+    Font.Name = 'Courier New'
+    Lines.Strings = (
+      'If I >= 10 then'
+      'begin'
+      '  if I < 15 then lblResult.Caption := ''10 < I < 15'''
+      'end else'
+      '  lblResult.Caption := ''I < 10''; '
+    )
+    ParentFont = False
+    TabOrder = 3
+  end
+  object btnCase2: TButton
+    Left = 736
+    Height = 31
+    Top = 224
+    Width = 94
+    Caption = 'Case 2'
+    TabOrder = 4
+    OnClick = btnCase2Click
+  end
+  object btnCase: TButton
+    Left = 736
+    Height = 31
+    Top = 520
+    Width = 94
+    Caption = 'Case'
+    TabOrder = 5
+    OnClick = btnCaseClick
+  end
+  object lblResultCase: TLabel
+    Left = 192
+    Height = 28
+    Top = 376
+    Width = 268
+    AutoSize = False
+    Color = clMoneyGreen
+    ParentColor = False
+    Transparent = False
+  end
+  object edtC: TLabeledEdit
+    Left = 104
+    Height = 28
+    Top = 376
+    Width = 72
+    EditLabel.Height = 20
+    EditLabel.Width = 9
+    EditLabel.Caption = 'C'
+    LabelPosition = lpLeft
+    LabelSpacing = 10
+    TabOrder = 6
+    Text = 'A'
+  end
+  object Memo3: TMemo
+    Left = 128
+    Height = 136
+    Top = 416
+    Width = 568
+    Color = clBtnFace
+    Font.Color = clBlue
+    Font.Height = -17
+    Font.Name = 'Courier New'
+    Lines.Strings = (
+      'Case C of  '
+      ' ''a'',''e'',''i'',''o'',''u'' : lblResultCase.Caption := ''สระ'';  '
+      ' ''0''..''9'' : lblResultCase.Caption := ''ตัวเลข'';  '
+      'else  '
+      '  lblResultCase.Caption := ''วรรณยุกต์'';  '
+      'end;'
+    )
+    ParentFont = False
+    TabOrder = 7
+  end
+end
